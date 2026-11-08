@@ -1,0 +1,11 @@
+{
+  "name": "clean-code",
+  "version": "0.1.0",
+  "description": "36 researched rules for readable, easy-to-maintain code, plus a pre-commit checklist. Follows each project's own conventions first.",
+  "author": {
+    "name": "Abdulkader Safi",
+    "email": "safi.abdulkader@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["clean-code", "code-quality", "refactoring", "naming", "code-review"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "clean-code-rules",
+  "description": "Clean code rules for Claude Code: 36 researched rules for readable, easy-to-maintain code.",
+  "owner": {
+    "name": "Abdulkader Safi",
+    "email": "safi.abdulkader@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "clean-code",
+      "source": "./",
+      "description": "36 researched rules for readable, easy-to-maintain code, plus a pre-commit checklist."
+    }
+  ]
+}
