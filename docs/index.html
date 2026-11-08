@@ -609,11 +609,12 @@ if (window.gsap && !reducedMotion) {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.from('.reveal-up', { y: 32, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.12 });
-  gsap.from('.hero-panel', { y: 48, scale: 0.94, opacity: 0, duration: 1.2, delay: 0.2, ease: 'power3.out' });
+  // Intro animates the panel's children; the scroll fade owns the figure, so the two never fight over opacity
+  gsap.from('.hero-panel > *', { y: 48, scale: 0.94, opacity: 0, duration: 1.2, delay: 0.2, stagger: 0.1, ease: 'power3.out' });
 
-  // Hero panel fades and darkens as it leaves
-  gsap.to('.hero-panel', {
-    opacity: 0.2,
+  // Hero panel fades as it leaves and comes back when you scroll up
+  gsap.fromTo('.hero-panel', { opacity: 1 }, {
+    opacity: 0.2, ease: 'none', immediateRender: false,
     scrollTrigger: { trigger: '.hero-panel', start: 'center 30%', end: 'bottom top', scrub: true }
   });
 
